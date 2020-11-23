@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Music App</string>
+    <string name="empty_str" />
+    <string name="give_artist">Give Artist</string>
+    <string name="give_song">Give song</string>
+    <string name="search">Search</string>
+    <string name="artist">artist</string>
+    <string name="song">song</string>
+    <string name="new_search">New Search</string>
+    <string name="mode">MODE</string>
+    <string name="appName">Music Streaming</string>
+    <string name="start">Start</string>
+    <string name="home_page">Home Page</string>
+    <string name="choose_artist">Choose artist</string>
+    <string name="returnButton">Return</string>
+</resources>

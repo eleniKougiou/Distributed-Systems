@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/temp1"
+    tools:context=".SongActivity">
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="44dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="76dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_home"
+        tools:ignore="VectorDrawableCompat" />
+
+    <EditText
+        android:id="@+id/song"
+        android:layout_width="304dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:fontFamily="@font/raleway"
+        android:inputType="textPersonName"
+        android:text="@string/empty_str"
+        android:textColor="#091832"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeButton"
+        app:layout_constraintVertical_bias="0.416" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="305dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="212dp"
+        android:ems="10"
+        android:fontFamily="@font/raleway"
+        android:textColor="#091832"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/mode"
+        android:layout_width="97dp"
+        android:layout_height="28dp"
+        android:checked="true"
+        android:fontFamily="@font/raleway"
+        android:switchMinWidth="50dp"
+        android:text="@string/mode"
+        android:textColor="#091832"
+        android:thumbTint="#091832"
+        app:layout_constraintBottom_toTopOf="@+id/searchButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song"
+        app:layout_constraintVertical_bias="0.489" />
+
+    <TextView
+        android:id="@+id/chooseArtist"
+        android:layout_width="144dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:text="@string/choose_artist"
+        android:textColor="#091832"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:text="@string/search"
+        android:textColor="#091832"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song" />
+
+    <TextView
+        android:id="@+id/giveArtist"
+        android:layout_width="144dp"
+        android:layout_height="41dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:text="@string/give_artist"
+        android:textColor="#091832"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/artist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/artist"
+        android:layout_width="305dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="212dp"
+        android:ems="10"
+        android:fontFamily="@font/raleway"
+        android:inputType="textPersonName"
+        android:text="@string/empty_str"
+        android:textColor="#091832"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/giveSong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:text="@string/give_song"
+        android:textColor="#091832"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/song"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
