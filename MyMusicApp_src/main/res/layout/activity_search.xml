@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/temp1"
+    tools:context=".SearchActivity">
+
+    <TextView
+        android:id="@+id/searchingFor"
+        android:layout_width="180dp"
+        android:layout_height="78dp"
+        android:gravity="center"
+        android:text="Searching for:"
+        android:textSize="24sp"
+        android:fontFamily="@font/raleway"
+        android:textColor="#091832"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
+    <TextView
+        android:id="@+id/data"
+        android:layout_width="239dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:fontFamily="@font/raleway"
+        android:textColor="#091832"
+        android:text="@string/empty_str"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchingFor" />
+
+    <TextView
+        android:id="@+id/finalResult"
+        android:layout_width="260dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="216dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:text="@string/empty_str"
+        android:textColor="#091832"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.549"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newSearchButton" />
+
+    <Button
+        android:id="@+id/newSearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/returnButton"
+        android:fontFamily="@font/raleway"
+        android:textColor="#091832"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/finalResult" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:visibility="gone"
+        android:layout_width="294dp"
+        android:layout_height="18dp"
+        android:layout_marginBottom="33dp"
+        app:layout_constraintBottom_toTopOf="@+id/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/previous"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="132dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_skip_previous"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.33"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/next"
+        android:visibility="gone"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="132dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_skip_next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.674"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:visibility="gone"
+        android:layout_width="750px"
+        android:layout_height="750px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16000003"
+        app:srcCompat="@drawable/music" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:visibility="gone"
+        android:layout_width="58dp"
+        android:layout_height="19dp"
+        android:text="@string/empty_str"
+        android:textColor="@android:color/tertiary_text_dark"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/song"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="35dp"
+        android:fontFamily="@font/raleway"
+        android:gravity="center"
+        android:text="@string/song"
+        android:textColor="#000000"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/artist"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:fontFamily="@font/raleway_light"
+        android:gravity="center"
+        android:text="@string/artist"
+        android:textColor="#091832"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/song"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/mute"
+        android:visibility="gone"
+        android:layout_width="33dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="72dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_volume_mute"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/up"
+        android:visibility="gone"
+        android:layout_width="32dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="72dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_volume_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.915"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/sound"
+        android:visibility="gone"
+        style="@android:style/Widget.SeekBar"
+        android:layout_width="270dp"
+        android:layout_height="5dp"
+        android:layout_marginBottom="92dp"
+        android:progressDrawable="?attr/colorButtonNormal"
+        android:thumb="@drawable/custom_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:visibility="gone"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:tint="#091832"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/play_pause"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="132dp"
+        android:clickable="true"
+        android:tint="#091832"
+        app:backgroundTint="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="@android:color/transparent"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
